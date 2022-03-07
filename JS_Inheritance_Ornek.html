@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Link
+        {
+            linkOlustur(Name,link)
+            {
+               document.writeln('<a href="'+link+'">'+Name+'</a>');
+            }
+        }
+
+        class imgLink extends Link
+        {
+            linkOlustur(src,link)
+            {
+                super.linkOlustur('<img src="'+src+'" width=90px height=120px alt="">',link);
+            }
+        }
+
+        let link=new Link();
+
+        link.linkOlustur("Mutlu","https://www.google.com/");
+
+        document.writeln("<br>");
+        let img=new imgLink();
+
+        img.linkOlustur("3.jpg","https://www.google.com/");
+
+        document.writeln("<br>");
+
+        link.linkOlustur("happy","https://www.google.com/");
+
+    </script>
+</body>
+</html>

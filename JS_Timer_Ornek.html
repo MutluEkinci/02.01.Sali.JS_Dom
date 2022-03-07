@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #zaman
+        {
+            width: 200px; height: 200px;
+            background-color: aquamarine;
+        }
+        #timer
+        {
+            width: 200px; height: 200px; border-radius: 50%; display: grid; align-content: center; justify-content: center;
+            background-color: blueviolet; font-size: 50px; color:darkorange;
+
+        }
+        #links
+        {
+            display: none;
+        }
+    </style>
+    <script>
+        
+        function yukle()
+        {
+            // let count=5;
+
+            // let handle = setInterval(() => {
+            // let tmr=document.getElementById("timer");
+            
+            // tmr.innerText = count;
+            // count--;
+            
+            // if(count==-1)
+            // {
+            //     clearInterval(handle);
+            //     tmr.innerHTML="<button>İndir</button>";
+            // }
+            // }, 1000);
+
+            let counter=document.getElementById("timer");
+            let count=parseInt(counter.innerText);
+            let handle = setInterval(()=>{
+                count--;
+                counter.innerText=count;
+                if(count==0)
+                {
+                    let links=document.getElementById("links");
+                    links.style.display="block";
+                    clearInterval(handle);
+                }
+            } ,1000)
+        }
+    </script>
+</head>
+<body onload="yukle()">
+    <div id="zaman">
+        <div id="timer">5</div>
+    </div>
+    
+    <div id="links">
+        <a href="">Link 1</a><br>
+        <a href="">Link 1</a>
+    </div>
+</body>
+</html>

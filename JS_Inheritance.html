@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Daire
+        {
+            constructor(r)
+            {
+                this.r=r;
+            }
+
+            getYaricap()
+            {
+                return this.r;
+            }
+            setYaricap(value)
+            {
+                this.r=value;
+            }
+
+            Hesapla()
+            {
+                return 3.14*this.r*this.r;
+            }
+        }
+
+        class Silindir extends Daire
+        {
+            constructor(r,h)
+            {
+                super(r);
+                this.h=h;
+            }
+
+            Hesapla()
+            {
+                return super.Hesapla()*this.h;
+            }
+        }
+
+        let daire=new Daire(4);
+
+        document.writeln(daire.Hesapla());
+
+        let silindir=new Silindir(4,4);
+
+        document.writeln(silindir.Hesapla());
+    </script>
+</body>
+</html>

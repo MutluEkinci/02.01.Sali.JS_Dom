@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //js'de zamana bağlı işlemler
+        //setTimeout() : bir süre bekler ve sonra çalışır.
+        //setInterval() : belirli bir aralıkta sürekli tekrarlar.
+    </script>
+</head>
+<body>
+    <div id="zaman"></div>
+    <script>
+        //setTimeout(()=>{alert("Merhaba ...")},5000);
+        let count=0;
+
+        let handle = setInterval(() => {
+            let zmn=document.getElementById("zaman");
+            let saat=new Date;
+            zmn.innerText= saat.toLocaleTimeString();
+            count++;
+            if(count==5)
+            {
+                clearInterval(handle);
+            }
+        }, 1000);
+        
+    </script>
+</body>
+</html>

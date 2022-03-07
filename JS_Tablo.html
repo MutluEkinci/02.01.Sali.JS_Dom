@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bagla()
+        {
+            let buttons=document.getElementsByTagName("button");
+            for(let i=0;i<buttons.length;i++)
+            {
+                buttons[i].addEventListener("click",(e)=>
+            {
+                let tr= e.target.parentElement.parentElement;
+                // tr.parentElement.removeChild(tr);
+                tr.remove();
+            });
+            }
+        }
+    </script>
+</head>
+<body onload="bagla()">
+    <table border =1>
+        <tr>
+            <td>123</td>
+            <td>Urun 1</td>
+            <td>123</td>
+            <td><button id=1>Sil</button></td>
+        </tr>
+        <tr>
+            <td>145</td>
+            <td>Urun 2</td>
+            <td>123</td>
+            <td><button id=2>Sil</button></td>
+        </tr>
+        <tr>
+            <td>156</td>
+            <td>Urun 3</td>
+            <td>123</td>
+            <td><button id=3>Sil</button></td>
+        </tr>
+    </table>
+</body>
+</html>
